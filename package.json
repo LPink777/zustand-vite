@@ -10,7 +10,8 @@
         "lint:script": "eslint",
         "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
         "lint": "npm run lint:script && npm run lint:style",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "commit": "git-cz"
     },
     "dependencies": {
         "@emotion/css": "^11.11.2",
@@ -30,9 +31,15 @@
             "git add ."
         ]
     },
+    "config": {
+        "commitizen": {
+            "path": "@commitlint/cz-commitlint"
+        }
+    },
     "devDependencies": {
         "@commitlint/cli": "^17.6.3",
         "@commitlint/config-conventional": "^17.6.3",
+        "@commitlint/cz-commitlint": "^19.5.0",
         "@eslint/js": "^9.13.0",
         "@stylistic/eslint-plugin": "^2.9.0",
         "@swc/plugin-styled-components": "^1.5.67",
@@ -46,6 +53,7 @@
         "@vitejs/plugin-react-swc": "^3.2.0",
         "autoprefixer": "^10.4.14",
         "babel-plugin-react-compiler": "0.0.0-experimental-487cb0e-20240529",
+        "commitizen": "^4.3.1",
         "commitlint": "^17.5.1",
         "cssnano": "^6.0.1",
         "eslint": "^9.13.0",
